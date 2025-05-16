@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proceeding</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+<style>
+    *{
+    margin: 0;
+    border: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+a{
+    text-decoration: none;
+}
+.navbar{
+    height: 5rem;
+    width: 84rem;
+    background-color: black;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+.navbar:hover{
+    border: none;
+    margin: none;
+    padding: none;
+}
+.logo{ 
+height: 5rem;
+width:8rem;
+border-radius: 10%;
+margin-left: 0.5rem;
+margin-right:1.5rem;
+background-image: url(logo.png);
+background-size: 100% 100%;
+align-items: center;
+&:hover{
+    cursor:pointer;
+ background-color: white;
+    border-top: 0.175rem solid white;
+    border-bottom:0.175rem solid red;
+    border-left: 0.175rem solid rgb(229, 255, 0);
+    border-right: 0.175rem solid rgb(0, 204, 255);
+}
+}
+.border{
+    &:hover{
+        border: 2px solid white ;
+    }
+}
+.Deliver{
+font-size: 0.9rem;
+}
+.icon{
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    display: flex;
+    align-items: center;
+}
+.add{
+    font-size: 1rem;
+    margin-left: 0.20rem;
+}
+.search{
+    margin-left: 1rem;
+    margin-right: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 38rem;
+    height: 3rem;
+    border-radius: 0%;
+}
+.search:hover{
+    border: 0.15rem solid orange;
+}
+.search-select{
+width: 25rem;
+height: 1.8rem;
+font-size: 1.2rem;
+color: rgb(255, 210, 11);
+background-color: black;
+text-align: center;
+border-bottom-left-radius: 0.5rem;
+border-top-left-radius: 0.5rem;
+}
+.search-input{
+   border-bottom-left-radius: 0.5rem;
+   border-top-left-radius: 0.5rem;
+   width: 100REM;
+   height:1.50rem;
+   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+   font-size: 1.15rem;
+   text-align: center;
+   border: none;
+}
+.search-icon{
+    height: 1.65rem;
+    width: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    background-color: rgba(255, 174, 0);
+    border-bottom-right-radius:0.3rem;
+    border-top-right-radius: 0.3rem;
+}
+.signin{
+    margin-left: 0.5rem;
+    margin-right: 0.7rem;
+    font-size:0.9rem;
+}
+.return{
+    margin-left:0.8rem;
+    margin-right: 1.5rem;
+    font-size: 0.9rem;
+    font-family: Arial, Helvetica, sans-serif, cursive;
+}
+.cart{
+    font-weight: bolder;
+        font-size: 0.9rem;
+        margin-right: 10px;
+        & i {
+            font-size: 2rem;
+            color: rgba(255, 174, 0);
+            background-color: rgb(0, 0, 0);
+        }
+    }
+.contact{
+    margin-left: 1rem;
+    margin-right:1rem;
+    display: flex;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-style: italic;
+    background-color: white;
+    color: black;
+    font-size:0.95rem;
+    & i{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: blue;
+        margin-right:0.5rem;
+        margin-left:0.5rem;
+        background-color: white transparent;
+    }
+    &:hover{
+        cursor: pointer;
+    }
+}
+.space{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.main{
+    background-color: none
+    ;
+}
+ .paijama-section{
+        display: flex;
+        justify-content: space-evenly;
+        width: 84rem;
+        background-color:#e2e7e6;
+    }
+    .box{
+        border: 0.3rem solid black;
+        width: 23%;
+        height: 25rem;
+        background-color: #fbfbfc;
+        padding: 0.3rem 0rem 1rem;
+        margin-top: 1rem;
+    }
+    h2{
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 1.35rem;
+    }
+
+    .box-img{
+        height: 18.35rem;
+        background-size:100% 100%;
+        background-position: 1%;
+        margin-top: 1rem;
+        margin-bottom: 0.50rem
+    }
+    .box-content{
+        padding: 0.7rem;
+        text-align: center;
+    }
+    .pandp{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 0.10rem;
+        background: linear-gradient(-45deg,#FE7743,#EFEEEA,#60aee2,#7AE2CF);
+        background-size: 400% 400%;
+        background-color: none;
+        height: 5rem;
+        width: 1375rem;
+        animation: move 5s ease infinite;
+    }
+.paijama{
+    text-align: center;
+    color: rgb(0, 0, 0);
+    filter: drop-shadow(0.2rem 0.2rem 0.2rem rgb(255, 170, 170));
+    animation: text 2.5s ease-in-out infinite;
+    &:hover{
+        border-top:0.2rem solid yellow;
+        border-bottom: 0.2rem solid yellow;
+        border-left: 0.2rem solid black;
+        border-right:0.2rem solid rgb(0, 0, 0);
+        cursor: pointer;
+    }
+}
+/* for moving background */
+@keyframes move {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Keyframes for text floating */
+@keyframes text {
+  0%   { transform: translateY(0); }
+  25% {transform: translateY(-20px);}
+  50%  { transform: translateY(20px); }
+  75% {transform: translateY(0px);}
+  100% { transform: translateX(0px); }
+}
+.pandp{
+    width: 84rem;
+    font-size:2rem;
+    font-weight: bolder;
+}
+.foot{
+    color: white;
+    background-color: rgb(0, 0, 0);
+    text-align: center;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2.75rem;
+    position: absolute;
+    padding-top:0.2rem;
+    margin-top: 0.2rem;
+    width: 83.95rem;
+}
+.left{
+   font-size: 1.25rem;
+   margin-left: 68rem;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+#left{
+    color: rgb(255, 243, 243);
+    font-size: 1rem;
+    margin-right: 0.25rem;
+}
+</style>
+</head>
+<body>
+    <header>
+        <div class="navbar" >
+                   <div class="logo">
+                    <div class="logo-img" ></div>
+                </div>
+                <div class="space">
+                    <!-- logo got over -->
+                <div class="address border">
+                    <p class="Deliver">Deliver to</p>
+                    <div class="icon">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <p class="add">Mumbai</p>
+                    </div>
+                </div>
+                <!-- location got over -->
+                <div class="search">
+                    <select class="search-select">
+                 <option>🚇Mumbai</option>
+                 <option>🚍Lucknow</option>
+                 <option>🚢Chennai</option>
+                 <option>🚍Banguluru</option>
+                 <option>🚢Kolkata</option>
+                 <option>🚢Surat</option>
+                 <option>🚇Chadigarh</option>
+                 <option>🚇Delhi</option>
+                      </select >
+                    <!-- select bar got over -->
+                 <input type="text" list="input" placeholder="Search Garment" class="search-input">
+            <datalist id="input">
+                    <option>❤️Sando</option>
+                    <option>🏈Ruby</option>
+                    <option>💖Paijama</option>
+                    <option>🤩Megha</option>
+                    <option>😉Barmuda</option>
+                    <option>🌠Karina</option>
+                    <option>👌Sando Jabla</option>
+                    <option>👍Barmuda</option>
+                    <option>🤟Sando button</option>
+                    <option>👶Fancy Button</option>
+                    <option>🤓Sando Slives</option>
+                    <option>🧐Fancy Jabla</option>
+                    <option>🤑Banyan Plain</option>
+                    <option>🧭Banyan Print</option>
+                    <option>🧲Gents</option>
+                    <option>💡Misla</option>
+                    <option>⚡Selva</option>
+                    <option>😎Sando Underwear</option>
+                    <option>🏺T-shirts</option>
+                    <option>🛰️Girls</option>
+                    <option>🎇Sando R/N</option>
+            </datalist>
+      </select >
+      <!-- search icon started -->
+                    <div class="search-icon border">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
+                </div>
+                <!-- search bar got over -->
+                <div class="signin border">
+                    <p><span> Hello, <a href="https://accounts.google.com/ServiceLogin?hl=en-GB" style="color: rgb(151, 151, 235);">sign.in</a></span></p>
+                   <p class="Accounts"><b>Accounts & list</b></p>
+                </div> 
+                <!-- signin got over -->
+                <div class="return border">
+                    <p><span>Returns</span></p>
+                   <p class="Orders"><b>& Orders</b></p>
+                </div>
+                <!-- Orders got over -->
+                <div class="cart border">
+                    <i class="fa-solid fa-cart-shopping"></i> 
+                    CART
+                </div>
+            </div>
+                <!-- cart got over -->
+                <div class="contact border">
+                    <i class="fa-solid fa-phone-flip"></i>
+                    Contact Us
+                </div>
+        </div>
+            <!-- navbar got over -->
+        </header>
+<div class="pandp">
+    <div class="paijama"><a class="sand">𝓟𝓪𝓲𝓳𝓪𝓶𝓪 & 𝐼𝓉'𝓈 𝓥𝓪𝓻𝓲𝓽𝔂</div></a>
+</div>
+
+        <div class="paijama-section">
+            <div class="box ">
+               <div class="box-content">  
+                        <h2> 𝓟𝓪𝓲𝓳𝓪𝓶𝓪 0</h2>
+                    <div class="box-img " style="background-image: url('paijama\ 0.jpeg');" ></div>
+                    <p> <a>Prize ₹100 for 4</a>
+             <br>
+                   <a>Good Quality For your kids </a>
+             <br>
+                   <a>Made For Summer</a>
+                    </p>
+               </div>
+            </div>
+             <!-- Paijama O GOT OVER -->
+            <div class=" box ">
+                <div class="box-content " > 
+                    <h2> 𝓟𝓪𝓲𝓳𝓪𝓶𝓪 𝙎 </h2>
+                    <div class="box-img " style="background-image: url('paijama\ S.jpeg');" ></div>
+                    <p> <a>Prize ₹100 for 4</a>
+             <br>
+                   <a>Good Quality For your kids </a>
+             <br>
+                   <a>Made For Summer</a>
+                    </p>
+               </div>
+            </div>
+            <!-- Paijama S GOT OVER -->
+            <div class=" box ">
+                <div class="box-content " > 
+                    <h2> 𝓟𝓪𝓲𝓳𝓪𝓶𝓪 𝓜</h2>
+                    <div class="box-img " style="background-image: url('paijama\ M.jpeg');" ></div>
+                    <p> <a>Prize ₹100 for 4</a>
+             <br>
+                   <a>Good Quality For your kids </a>
+             <br>
+                   <a>Made For Summer</a>
+                    </p>
+               </div>
+            </div>
+            <!-- Paijama M GOT OVER -->
+            <div class=" box ">
+                <div class="box-content " > 
+                    <h2> 𝓟𝓪𝓲𝓳𝓪𝓶𝓪 𝓛 </h2>
+                    <div class="box-img " style="background-image: url('paijama\ L.jpeg');" ></div>
+                    <p> <a>Prize ₹100 for 4</a>
+             <br>
+                   <a>Good Quality For your kids </a>
+             <br>
+                   <a>Made For Summer</a>
+                    </p>
+               </div>
+            </div>
+            <!-- Paijama L GOT OVER -->
+        </div>
+        <footer>
+            <div class="foot">
+                <div class="left">
+                    <a href="family garment.html" style="color: rgb(255, 255, 255);">
+                        <i class="fa-solid fa-circle-arrow-left" id="left"></i>
+                        𝓑𝓪𝓬𝓴 𝓽𝓸  𝓢𝓲𝓽𝓮
+                    </a>
+                </div>
+            </div>
+       </footer>
+</body>
+</html>
