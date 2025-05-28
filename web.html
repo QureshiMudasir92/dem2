@@ -1,0 +1,361 @@
+<!DOCTYPE HTML>
+<HTML>
+    <HEAD>
+    <TITLE id="title">Website For Funk Songs</TITLE>
+    <meta charset="UTF-8">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=0.5"> -->
+     <link rel="website icon"type="jfif"  href="school.jfif">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+   <meta name="viewport" content="width=device-width, initial-scaleX=20">
+<style>
+    *{
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif,cursive,a;
+}
+/* For day and night */
+.nki{
+    margin-left: 1%; 
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+    align-items:start;
+    justify-content: start;
+ 
+}
+@keyframes spin{
+    0%{transform: rotate(0deg);}100%{transform: rotate(360deg);}
+}
+/* body:has(option[value="light"]:checked){
+            --background:white;
+            --text-color:black;
+            background-color: rgb(255, 255, 255);
+        } */
+body:has(option[value="dark"]:checked){
+            --background:rgb(0, 0, 0);
+            -o-text-color:rgb(255, 255, 255);
+            background-color: rgb(0, 0, 0);
+            color:rgb(255, 255, 255);
+        }
+body:has(option[value="Montagem Tomada"]:checked){
+            --background:rgb(0, 0, 0);
+            -o-text-color:rgb(255, 255, 255);
+            background-color: rgb(255, 3, 3);
+            color:rgb(255, 255, 255);
+        }
+
+.select{
+    margin-right: 1%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    border-radius: 100px;
+    outline-color: blue;
+    padding-left: 1%;
+    outline-width: 2px;
+    z-index: 1;
+     border-top: 5px solid red;
+    border-bottom: 5px solid#F7EC59;
+    border-left:5px  solid #FF66D8;
+    border-right: 5px  solid #92DCE5;
+    border-top-left-radius:25px;
+    border-top-right-radius: 100px;
+    border-bottom-left-radius:100px;
+    border-bottom-right-radius: 25px;  
+    &:hover{
+        
+        background-color: rgb(0, 0, 0);
+        color:rgb(255, 255, 255);
+    }
+    &:active{
+        background-color: rgb(0, 0, 0);
+        color:rgb(255, 255, 255);
+    }
+    &:focus{
+        background-color: rgb(0, 0, 0);
+        color:rgb(255, 255, 255);
+    }
+    &::after{
+        background-color: #F7EC59;
+
+    }
+}        
+/* formation of navbar starts from here */
+#set{
+    position:absolute;
+    top:3px
+    ;
+    left: 0%;
+    left:200px;
+    animation: nope 1s infinite;
+    background-color: aquamarine;
+    color: rgb(0, 0, 0);
+    border: 2px solid black;
+    border-bottom-left-radius:10px;
+    border-bottom-right-radius:10px;
+    border-top-right-radius:7.2px;
+    border-top-left-radius:7.2px;
+   }
+   .baup{
+display: flex;
+align-items: center;
+justify-content: center;
+   }
+   @property --angle{
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+   }
+   .nav{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 3px;
+    border-radius: 50px;
+    position: relative;
+    translate: -50%,-50%;
+    &::after,&::before{
+    --angle:0deg;
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-image: conic-gradient(from var(--angle),green,red,yellow);
+    border-radius: 50px;
+    z-index: -1;
+    animation:spin 3s linear infinite;
+    }
+   }
+   @keyframes spin {
+from{
+--angle:0deg;
+}   
+to{
+--angle:360deg;
+} 
+   }
+.nav::before{
+    filter: blur(1.5rem);
+}
+.search-input{
+    width:210px;
+    text-align: center;
+    border-radius: 10px;
+    position: relative;
+    &::after{
+content: '';
+position: absolute;
+height: 100%;
+width: 100%;
+background-color: #F7EC59;
+    }
+}
+button{
+    color: rgb(255, 4, 25);
+    font-weight: bolder;
+    border: 2px solid white;
+    background-color: black;
+     animation: nmae 1s ease infinite;
+    &:hover{
+        color: white;
+        background-color: black;
+         font-weight: lighter;
+        border-radius: 20px;
+        border: 2px solid black;
+       animation: nmae 10s infinite;
+    }
+    &:active{
+        border-image: repeat;
+        box-shadow: 2px 2px 4px green;
+       
+    }
+}
+i{
+    font-size: medium;
+    background-color: black;
+    margin-left: 0%;
+    color: aquamarine;
+     margin-left:2px;
+    border: 2px solid black;
+    animation: name 10s infinite;
+    &:hover{
+   border: 2px solid transparent;
+   color: aqua;
+   background-color: black;
+    color: white;
+    border: 2px solid black;
+   scale: 200px;
+}   
+    &:active{
+     background-color: blue;
+    }
+    }
+/* navbar got over */
+.track{
+  margin-top: 2%;
+    margin-bottom: 2%;
+    gap: 2rem; 
+    text-align: center;
+}
+.tracker{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+track::before{
+    margin-top: 2%;
+    margin-bottom: 2%;
+    gap: 2rem;
+}
+track::after{
+    margin-top: 2%;
+    margin-bottom: 2%;
+    gap: 2rem; 
+}
+/* search inout is here */
+.track-list{
+    margin-left: 1%;
+}
+audio{
+    margin-top: 1%;
+}
+iframe{
+    height: 100px;
+    width:200 ;
+}
+/* content over here */
+</style>
+  </HEAD>
+        <BODY>
+<script>
+   alert("Let's Funk Today")   
+</script>
+<script>
+     function filterTracks() {
+      const input = document.getElementById("searchInput").value.toLowerCase();
+      const tracks = document.querySelectorAll(".track");
+
+      tracks.forEach(track => {
+        const title = track.querySelector("h3").textContent.toLowerCase();
+        track.style.display = title.includes(input) ? "block" : "none" ;
+      });
+    }
+</script>
+<main>
+<!-- nav bar formation starts here -->
+ <div class="nki">
+    <select class="select">
+    <!-- <option value="light" type="checked">Lightmode☀️</option> -->
+    <option value="dark" type="checked">Darkmode🌑</option>
+</select> 
+ </div>
+ <h1 style="text-align: center;">Phonk Music Player</h1>
+ <div class="baup">
+<div class="nav">
+   <input type="text" list="sinput" placeholder="Search Funk" class="search-input" id="searchInput" onkeyup="filterTracks()">
+            <datalist id="sinput">
+                    <option aria-autocomplete="list">Montagem Tomada </option>                 
+                    <option aria-autocomplete="list" >Montagem Bailao</option>                 
+                    <option aria-autocomplete="list">Montagem Bravo</option>                 
+                    <option aria-autocomplete="list">Cute Depressed</option>                 
+                    <option aria-autocomplete="list">Odnogo ULTAFUNK</option>                 
+                    <option aria-autocomplete="list">Death Lotto</option>                 
+                    <option aria-autocomplete="list">2 Phut Hun</option>                 
+                    <option aria-autocomplete="list">Passo Bem Solto</option>                 
+                    <option aria-autocomplete="list">Masha Ultafunk</option>                 
+                    <option aria-autocomplete="list">Blue Horizon</option>                 
+                    <option aria-autocomplete="list">Slava Ultrafunk</option>                 
+                    <option aria-autocomplete="list">Matushka Ultrafunk</option>                 
+                    <option aria-autocomplete="list">Nunca Munda</option>
+                    <option aria-autocomplete="list">Nomi XD</option>
+                    <option aria-autocomplete="list">No Fear</option>
+                    <option aria-autocomplete="list">Montagem Ladrao</option>
+                    <option aria-autocomplete="list">Montagem Vois</option>
+                    <option aria-autocomplete="list">Montagem Caveira</option>
+</datalist>
+</select >
+       <button><i class="fa-brands fa-searchengin" id="set" title="Search it now--"></i></button>                                                  
+</div>  
+ </div>
+<header>
+
+  <div class="track-list" id="trackList">
+    <div class="track">
+      <h3>Montagem Tomada - DJ Scuff</h3>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Yjt0nlxZP5w?si=h2QWdmSTNtq0Bqxy" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+    <div class="track">
+      <h3>Montagem Bravo - DJ Arana</h3>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/z_G5qtAoRnU?si=EEHo3Iyj4FNev7iA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+    <div class="track">
+      <h3>Funk DO Balkan</h3>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/rK9gOo22vyg?si=WIJTq0yy1YSArWfd" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+    <div class="track">
+      <h3>Montagem Vois - DJ Natan</h3>
+      <iframe width="500" height="200"src="https://www.youtube.com/embed/6LgadRFEDJc?si=S4evLGVPUl-Hhso9" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+    <div class="track">
+      <h3>Matushka Ultrafunk</h3>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/LvXxYocN1vU?si=0i5MHHY-NUDLLS1N" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+    <div class="track">
+      <h3>Montagem Bailao</h3>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/B9KFb_fmvV8?si=KY9OKOYbkwkSTfLF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+    <div class="track">
+      <h3>Cute Depressed</h3>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/abwf-BdPFsQ?si=lM05h8aFC4DgtkMU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+    <div class="track">
+      <h3>Meet the Frownies X Lovely Bastards (Slowed + Reverb)</h3>
+     <iframe width="560" height="315" src="https://www.youtube.com/embed/DlYEjyaA9ug?si=eYemaCBuX8wqBgQr" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+    <div class="track">
+      <h3>Odnogo ULTAFUNK</h3>
+    </div>
+    <div class="track">
+      <h3>2 Phut Hun</h3>
+    </div>
+    <div class="track">
+      <h3>Passo Bem Solto</h3>
+    </div>
+    <div class="track">
+      <h3>Masha Ultafunk</h3>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/anLOn1B-6Ns?si=qYyYB4ljA3tjjib4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+    <div class="track">
+      <h3>Sayfalse -Scythermane, Wxrmane</h3>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/PAW7-VGEpKQ?si=x4ww6a2Kz1eWnJz2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+    
+    <div class="track">
+      <h3>Blue Horizon</h3>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/QfNsDdnBc0k?si=qNOFVwZgnmbQGrNW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+    <div class="track">
+      <h3>Slava Ultrafunk</h3>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/xc55HjLRZfQ?si=gw3uP6mwtOYuTcDP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+    <div class="track">
+      <h3>Nunca Munda</h3>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/ZiDAbh5hY48?si=IMDLE16gsVpzGPTl" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+    <div class="track">
+      <h3>No Fear</h3>
+    </div>
+    <div class="track">
+      <h3>Nomi XD</h3>
+    </div>
+    <div class="track">
+      <h3>Montagem Ladrao</h3>
+    </div>
+    <div class="track">
+      <h3>Death Lotto</h3>
+       <iframe width="560" height="315" src="https://www.youtube.com/embed/THInIdodWQQ?si=65UifPjCMJ35QvOH"></iframe>   s
+    </div>
+  </div>
+</section>    
+</main>
+    

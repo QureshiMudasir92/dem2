@@ -42,14 +42,16 @@
         @keyframes blink {
             50%{border: 2px solid black;border-color:transparent; }
         }
-        /* body:has(option[value="light"]:checked){
+        body:has(option[value="light"]:checked){
             --background:white;
             --text-color:black;
-        } */
-        body:has(option[value="dark"]:fullscreen){
+            background-color: rgb(255, 255, 255);
+        }
+        body:has(option[value="dark"]:checked){
             --background:rgb(0, 0, 0);
             -o-text-color:rgb(255, 255, 255);
-            background-color: aqua;
+            background-color: rgb(0, 0, 0);
+            color:rgb(255, 255, 255);
         }
        
         select option{
@@ -66,6 +68,7 @@
             /* background:linear-gradient(yellow,blue,green,Lightgreen); */
             height: 20px;
             width: 110px;
+            text-decoration-style: double;
             margin-top: 10px;
             margin-left: 1%;
             text-align: center;
@@ -106,9 +109,9 @@
             display:block;
             justify-content: center;
             align-items:center;
-            background-color: rgb(0, 0, 0);
+            background-color:transparent;
             margin-left: 12%;
-margin-right: 1.5%;
+/* margin-right: 1.5%; */
         }
         .container{
             /* display: flex; */
@@ -199,6 +202,15 @@ margin-right: 1.5%;
             border: 2px solid rgb(255, 255, 255);
             /* outline: 2px solid red; */
         }
+        p{
+            text-align: center;
+            animation: up 2s  infinite;
+        }
+        @keyframes up{
+            0%{transform: translateY(100);}
+            50%{transform: translateY(0);}
+            100%{transform: translateY(100);}
+        }
     </style>
 </head>
 <body>
@@ -260,12 +272,13 @@ margin-right: 1.5%;
         <button type="submit" id="subol" onclick="Register()">Submit</button> 
    </div>
    </div>
-   
+  <p>Everyday Funky</p>
  <script>
      function Register() {
   const track = document.getElementById('subol');
   alert('Your request Been Submitted');
 }
+
  </script>
 </body>
 </html>
